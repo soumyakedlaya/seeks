@@ -1,0 +1,10 @@
+<h1>Log In if Existing User</h1>
+<% if flash[:errors]%>
+    <%= flash[:errors]%><br>
+  <% end %>
+<form action= '/sessions' method="post">
+  <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+  Email: <input type= "text" name="Email">
+  Password: <input type="password" name="Password">
+  <input type="submit" value="Log In">
+</form>

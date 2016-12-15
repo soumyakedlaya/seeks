@@ -1,0 +1,11 @@
+<% if flash[:errors]%>
+    <%= flash[:errors]%><br>
+  <% end %>
+<form action = "/users" method = "post">
+  <input type= "hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Name<input type="text" name="user[name]"></label>
+  <label>Email<input type="text" name="user[email]"></label>
+  <label>Password<input type="password" name="user[password]"></label>
+  <label>Password Confirmation<input type="password" name="user[password_confirmation]"></label>
+  <input type = "submit" value= "Join">
+</form>
